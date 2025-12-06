@@ -19,9 +19,9 @@ jobs:
           node-version: "20"
       - name: Setting Enviroments
         run: |
-          echo "PLATFORM=${{ vars.PLATFORM }}" >> $GITHUB_ENV
-          echo "ENVIRONMENT=${{ vars.ENVIRONMENT }}" >> $GITHUB_ENV
-          echo "REPORT=${{ vars.REPORT }}" >> $GITHUB_ENV
+          echo "PLATFORM=${{ env.PLATFORM }}" >> $GITHUB_ENV
+          echo "ENVIRONMENT=${{ env.ENVIRONMENT }}" >> $GITHUB_ENV
+          echo "REPORT=${{ env.REPORT }}" >> $GITHUB_ENV
           echo "SAUCE_USERNAME=${{ secrets.SAUCE_USERNAME }}" >> $GITHUB_ENV
           echo "SAUCE_ACCESS_KEY=${{ secrets.SAUCE_ACCESS_KEY }}" >> $GITHUB_ENV
 
